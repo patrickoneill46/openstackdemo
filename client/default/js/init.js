@@ -37,14 +37,14 @@ $fh.ready(function() {
   };//takePicture
   
   function uploadImage(){
-    picture = new Image();
-    picture.src = 'images/be.png';
+    hardCodedPicture = new Image();
+    hardCodedPicture.src = 'images/be.png';
     console.log(picture);
     
     $fh.act({
       act: 'postPicture',
       req: {
-        "data": picture,
+        "data": hardCodedPicture,
         "tmp": new Date().getTime()
       },
     },
