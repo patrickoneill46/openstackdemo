@@ -53,7 +53,7 @@ $fh.ready(function() {
       alert('Image sent.');
     },
     function (msg, err){
-      console.log('error', err);
+      console.log('error',msg, err);
       alert('Image not sent.');
     });
   }
