@@ -47,10 +47,10 @@ $fh.ready(function() {
         tmp: new Date().getTime()
       },
       function (res){
-        
+        console.log('success', res);
       },
       function (err){
-        
+        console.log('error', err);
       }
     });
   }
