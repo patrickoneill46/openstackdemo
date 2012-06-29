@@ -52,7 +52,7 @@ $fh.ready(function() {
       function (err){
         
       }
-    })
+    });
   }
 
   function listPictures() {
