@@ -35,6 +35,11 @@ $fh.ready(function() {
       targetHeight: 150
     });
   };//takePicture
+  
+  function uploadPicture(){
+    var picture = new Image('images/be.png');
+    
+  }
 
   function listPictures() {
     $fh.act({
