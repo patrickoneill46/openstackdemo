@@ -50,9 +50,11 @@ $fh.ready(function() {
     },
     function (res){
       console.log('success', res);
+      alert('Image sent.');
     },
-    function (err){
+    function (msg, err){
       console.log('error', err);
+      alert('Image not sent.');
     });
   }
 
