@@ -37,7 +37,8 @@ $fh.ready(function() {
   };//takePicture
   
   function uploadImage(){
-    picture = new Image('images/be.png');
+    picture = new Image();
+    picture.src = 'images/be.png';
     console.log(picture);
     
     $fh.act({
