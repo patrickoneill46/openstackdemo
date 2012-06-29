@@ -44,8 +44,8 @@ $fh.ready(function() {
     $fh.act({
       act: 'postPicture',
       req: {
-        data: picture,
-        tmp: new Date().getTime()
+        "data": picture,
+        "tmp": new Date().getTime()
       },
     },
     function (res){
