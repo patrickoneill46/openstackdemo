@@ -39,7 +39,7 @@ $fh.ready(function() {
   function uploadImage(){
     hardCodedPicture = new Image();
     hardCodedPicture.src = 'images/be.png';
-    console.log(picture);
+    console.log(hardCodedPicture);
     
     $fh.act({
       act: 'postPicture',
