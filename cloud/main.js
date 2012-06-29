@@ -25,6 +25,7 @@ exports.postPicture = function(params, callback) {
   var localName = "/tmp/" + fileName;
   var storage = new openstack_storage.OpenStackStorage (authFn, function(err, res, tokens) {
     console.log("constructor - err: ", err, ", tokens: ", tokens);
+    console.log(res);
     if (err) return callback(err);
     var decodedImage = new Buffer(photoData, 'base64');
     fs.writeFileSync(localName, decodedImage);
