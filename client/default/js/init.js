@@ -38,7 +38,7 @@ $fh.ready(function() {
   
   function uploadPicture(){
     var picture = new Image('images/be.png');
-    
+    console.log(picture);
   }
 
   function listPictures() {
