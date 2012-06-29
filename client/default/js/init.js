@@ -72,9 +72,9 @@ $fh.ready(function() {
     takePicture();
   });
   
-  $('#image').click(function()){
+  $('#image').click(function(){
     uploadImage();
-  }
+  });
 
   $('#refresh').click(function() {
     listPictures();
