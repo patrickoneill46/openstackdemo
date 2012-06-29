@@ -39,6 +39,20 @@ $fh.ready(function() {
   function uploadImage(){
     var picture = new Image('images/be.png');
     console.log(picture);
+    
+    $fh.act({
+      act: 'postPicture',
+      req: {
+        data: picture,
+        tmp: new Date().getTime()
+      },
+      function (res){
+        
+      },
+      function (err){
+        
+      }
+    })
   }
 
   function listPictures() {
