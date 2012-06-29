@@ -1,5 +1,7 @@
 $fh.ready(function() {
    $fh.legacy.fh_timeout = 500000;
+   
+   
    function takePicture() {
     $("#camera").attr("disabled", "disabled");
     var savedButtonText = $("#camera").html(); 
@@ -32,7 +34,7 @@ $fh.ready(function() {
       targetWidth: 150,
       targetHeight: 150
     });
-  };
+  };//takePicture
 
   function listPictures() {
     $fh.act({
@@ -46,7 +48,7 @@ $fh.ready(function() {
     }, function(msg, err) {
       alert('Cloud call failed with error:' + msg + '. Error properties:' + JSON.stringify(err));
     });
-  };
+  };//listPictures
 
 
   $('#picture_list').delegate('li', 'click', function() {
@@ -69,6 +71,10 @@ $fh.ready(function() {
   $('#camera').click(function() {
     takePicture();
   });
+  
+  $('#image').click(function()){
+    uploadImage();
+  }
 
   $('#refresh').click(function() {
     listPictures();
