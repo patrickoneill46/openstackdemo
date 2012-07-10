@@ -1,12 +1,7 @@
 var fs = require('fs');
 var async = require('async');
 var buffertools = require('buffertools');
-
-console.log("1");
-
 var openstack_storage = require('openstack-storage');
-
-console.log("2");
 
 var config = {
   "auth": {
@@ -20,14 +15,7 @@ var config = {
   "storageName": "swift-service"
 };
 
-console.log("3'");
-console.log(openstack_storage);
-console.log(openstack_storage.authenticate);
-
 var authFn = async.apply(openstack_storage.authenticate, config);
-
-console.log(authFn)
-console.log("4'");
 
 exports.postPicture = function(params, callback) {
   console.log('in postPicture with ts:' + Date.now());
@@ -36,13 +24,9 @@ exports.postPicture = function(params, callback) {
   var fileName = "photo_" + params.ts + ".jpg";
   var localName = "/tmp/" + fileName;
   
-  console.log("5")
-
   var storage = new openstack_storage.OpenStackStorage (authFn, function(err, res, tokens) {
-console.log("6'")
     console.log("constructor - err: ", err, ", tokens: ", tokens);
     console.log(res);
-console.log("7")
     if (err) return callback(err);
     var decodedImage = new Buffer(photoData, 'base64');
     fs.writeFileSync(localName, decodedImage);
