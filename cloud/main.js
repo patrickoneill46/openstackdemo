@@ -41,6 +41,7 @@ exports.postPicture = function(params, callback) {
 console.log("6")
     console.log("constructor - err: ", err, ", tokens: ", tokens);
     console.log(res);
+console.log("7")
     if (err) return callback(err);
     var decodedImage = new Buffer(photoData, 'base64');
     fs.writeFileSync(localName, decodedImage);
