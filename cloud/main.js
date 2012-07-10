@@ -26,7 +26,8 @@ console.log(openstack_storage.authenticate);
 
 var authFn = async.apply(openstack_storage.authenticate, config);
 
-console.log("4");
+console.log(authFn)
+console.log("4'");
 
 exports.postPicture = function(params, callback) {
   console.log('in postPicture with ts:' + Date.now());
