@@ -20,7 +20,7 @@ var config = {
   "storageName": "swift-service"
 };
 
-console.log("3");
+console.log("3'");
 console.log(openstack_storage);
 console.log(openstack_storage.authenticate);
 
