@@ -38,7 +38,7 @@ exports.postPicture = function(params, callback) {
   console.log("5")
 
   var storage = new openstack_storage.OpenStackStorage (authFn, function(err, res, tokens) {
-console.log("6")
+console.log("6'")
     console.log("constructor - err: ", err, ", tokens: ", tokens);
     console.log(res);
 console.log("7")
