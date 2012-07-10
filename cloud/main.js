@@ -2,11 +2,11 @@ var fs = require('fs');
 var async = require('async');
 var buffertools = require('buffertools');
 
-console.log("1")
+console.log("1");
 
 var openstack_storage = require('openstack-storage');
 
-console.log("2")
+console.log("2");
 
 var config = {
   "auth": {
@@ -20,11 +20,13 @@ var config = {
   "storageName": "swift-service"
 };
 
-console.log("3")
+console.log("3");
+console.log(openstack_storage);
+console.log(openstack_storage.authenticate);
 
 var authFn = async.apply(openstack_storage.authenticate, config);
 
-console.log("4")
+console.log("4");
 
 exports.postPicture = function(params, callback) {
   console.log('in postPicture with ts:' + Date.now());
