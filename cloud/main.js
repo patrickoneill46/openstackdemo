@@ -12,7 +12,7 @@ var config = {
     "tenantId": "cf44cc86f0dc4c6b9903400e52940d10"
   },
   "host": "http://ec2-79-125-126-243.eu-west-1.compute.amazonaws.com.:5000",
-  "storageName": "Swift Service"
+  "storageName": "swift-service"
 };
 
 var authFn = async.apply(openstack_storage.authenticate, config);
